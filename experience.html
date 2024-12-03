@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="headerstyle.css">
+
+    <title>Experience</title>
+    <style>
+    body {
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(145deg, #1e1e2e, #243b55); 
+    color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #384c8c;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #007BFF;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007BFF;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .skill {
+            flex: 1;
+            min-width: 150px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #1f9190;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .skill:hover {
+            background-color: #05f6fa;
+            color: white;
+            transform: scale(1.05);
+        }
+        .skill img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+        .timeline {
+            position: relative;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            border-left: 2px solid #007BFF;
+        }
+        .timeline-item {
+            position: relative;
+            padding: 20px;
+            width: 50%;
+            margin: 10px 0;
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #007BFF;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .testimonial {
+            margin-top: 30px;
+        }
+        .testimonial blockquote {
+            font-style: italic;
+            border-left: 5px solid #007BFF;
+            padding-left: 15px;
+        }
+        .language-skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .language-skills ul li {
+            background: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        progress {
+            width: 100%;
+            height: 20px;
+        }
+
+      
+        .company-img {
+            width: 350px;
+            height: 300px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .skills .skill img {
+            max-width: 30px;
+            margin-bottom: 5px;
+        }.testimonial-images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.testimonial-img {
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-img:hover {
+    transform: scale(1.1) rotate(2deg); /* Slight rotation */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Experience</h1>
+        <nav>
+            <ul>
+                <li><a href="websiteindex.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section>
+                <h3>About Me</h3>
+                <p>I am a passionate IT student with a keen interest in web development, programming and automation. My goal is to contribute my technical skills to innovative projects while continuing to improve my knowledge.</p>
+            </section>
+
+                <section>
+                <h3>Work Experience</h3>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <img src="cclcompany.jpg" alt="Company Logo" class="company-img">
+                        <h4>Internship IT Executive</h4>
+                        <p>CCL (M) SDN.BHD</p>
+                        <span>July - September 2024</span>
+                    </div>
+                    <div class="timeline-item right">
+                        <img src="kamycompany.png" alt="Company Logo" class="company-img">
+                        <h4>Admin Assistant</h4>
+                        <p>Kamy Enterprise</p>
+                        <span>January - March 2022</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Skills</h3>
+                <div class="skills">
+                    <div class="skill">
+                        <img src="html-icon.svg" alt="HTML">
+                        <h4>HTML</h4>
+                        <progress value="85" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <img src="css-icon.webp" alt="CSS">
+                        <h4>CSS</h4>
+                        <progress value="70" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <img src="microsoftword-logo.png" alt="JavaScript">
+                        <h4>Microsoft Word</h4>
+                        <progress value="80" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <img src="excel-logo.png" alt="Python">
+                        <h4>Microsoft Excel</h4>
+                        <progress value="75" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <img src="sql-icon.webp" alt="SQL">
+                        <h4>SQL</h4>
+                        <progress value="65" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <img src="canva-icon.webp" alt="SQL">
+                        <h4>Canva</h4>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <img src="codeblock-icon.png" alt="SQL">
+                        <h4>Codeblock</h4>
+                        <progress value="55" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <img src="microsoftpoint.jpg" alt="SQL">
+                        <h4>MicrosoftPoint</h4>
+                        <progress value="73" max="100"></progress>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonial">
+                <h3>Testimonial</h3>
+                <blockquote>
+                    "Muhammad Al-Hafiz was an excellent IT Intern. He played a pivotal role in optimizing our company’s internal system, which resulted in improved workflow efficiency."
+                </blockquote>
+                <b><p>- Nigel Joe, (Deputy General Manager) CCL (M) SDN.BHD</p></b>
+             <div class="testimonial-images">
+            <img src="internship-photo1.jpg" alt="Internship Photo 1" class="testimonial-img">
+            <img src="internship-photo2.jpg" alt="Internship Photo 2" class="testimonial-img">
+            <img src="internship-photo3.jpg" alt="Internship Photo 3" class="testimonial-img">
+        </div>
+            </section>
+
+            <section class="language-skills">
+                <h3>Languages</h3>
+                <ul>
+                    <li>English - Fluent</li>
+                    <li>Malay - Native</li>
+                    </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>This system was developed by Al-Hafiz Azman</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="headerstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("indexwallpaper.webp") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; 
+    color: #f5de0c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-banner {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero-banner h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.profile-section {
+    display: flex;
+    flex: 1 1 600px; 
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.profile-image {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    border: 5px solid #007BFF;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.2);
+    filter: brightness(0.9);
+}
+.about-me {
+    flex: 2;
+    margin-bottom: 30px;
+}
+
+.about-me h2 {
+    font-family: 'Lora', serif;
+    color: #007BFF;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.about-me p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.lists-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(145deg, #1e1e1e, #3c3c3c); 
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+.vision-board, .bucket-list, .favorite-color, .favorite-food {
+    background: linear-gradient(135deg, #222, #444); 
+    color: #ffd700; 
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.vision-board:hover, .bucket-list:hover, .favorite-color:hover, .favorite-food:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+.vision-board h3, .bucket-list h3, .favorite-color h3, .favorite-food h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #e0b128; 
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+
+.vision-board ul, .bucket-list ul, .favorite-color ul, .favorite-food ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vision-board ul li, .bucket-list ul li, .favorite-color ul li, .favorite-food ul li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f2f2f2; 
+}
+
+.vision-board ul li::before, .bucket-list ul li::before, 
+.favorite-color ul li::before, .favorite-food ul li::before {
+    content: "►"; 
+    position: absolute;
+    left: 0;
+    color: #ffcc00; 
+    font-size: 1.2rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.clock {
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    color: #f5de0c;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #f5de0c, 0 0 20px #ffd700, 0 0 30px #ffd700;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 123, 255, 0.9);
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .lists-section, .favorites-section {
+        flex-direction: column;
+    }
+
+    .vision-board, .bucket-list, .favorite-food, .favorite-color {
+        flex: 1 1 100%; 
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-banner">
+            <h1>Welcome to My Personal Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="biodata.html" title="Learn more about me">Biodata</a></li>
+                    <li><a href="experience.html" title="Discover my experiences">Experience</a></li>
+                    <li><a href="education.html" title="Explore my educational journey">Education</a></li>
+                    <li><a href="family.html" title="Meet my family">Family</a></li>
+                    <li><a href="gallery.html" title="View my photo gallery">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+            <section class="profile-section">
+            <div class="profile-image">
+                <img src="MEE.jpg" alt="Portrait of Muhammad Al-Hafiz Bin Azman">
+            </div>
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    Hi! <strong>Assalamualaikum</strong>, my name is <strong>Muhammad Al-Hafiz Bin Azman</strong>. 
+                    I’m 21 years old and hail from the beautiful state of Sabah, but I currently live in Johor. 
+                    As the second of three siblings, I dream big—my ultimate goal is to become a detective one day!
+                </p>
+                <p>
+                    I’m a final-year student pursuing a diploma in Information Management at UiTM Johor, Segamat campus. 
+                    I plan to continue my bachelor’s degree, either in <strong>Finance</strong> or <strong>Information Science System Management</strong>.
+                </p>
+            </div>
+        </section>
+
+        <section class="lists-section">
+    <div class="vision-board">
+        <h3>Vision Board</h3>
+        <ul>
+            <li>Graduate with a bachelor's degree in a field I'm passionate about.</li>
+            <li>Travel and explore new cultures around the world.</li>
+            <li>Build a meaningful career while maintaining a balanced personal life.</li>
+        </ul>
+    </div>
+    <div class="bucket-list">
+        <h3>Bucket List</h3>
+        <ul>
+            <li>Visit all states in Malaysia and document the journey.</li>
+            <li>Experience the thrill of skydiving at least once.</li>
+            <li>Take a selfie with Lisa from Blackpink!</li>
+        </ul>
+    </div>
+    <div class="favorite-color">
+        <h3>Favorite Colors</h3>
+        <ul>
+            <li><strong>Sky Blue</strong></li>
+            <li><strong>Sacramento Green</strong></li>
+            <li><strong>Red</strong></li>
+            <li><strong>Black</strong></li>
+        </ul>
+    </div>
+    <div class="favorite-food">
+        <h3>Favorite Food</h3>
+        <ul>
+            <li><strong>Chicken Chop</strong></li>
+            <li><strong>Chicken Baker Cottage</strong></li>
+            <li><strong>Murtabak</strong></li>
+        </ul>
+    </div>
+</section>
+
+
+    </main>
+</body>
+
+ 
+    <footer>
+         <div class="clock" id="clock"></div>
+        <div class="social-icons">
+           <a href="https://www.instagram.com/alhafizazmn/" target="_blank"><i class="fab fa-instagram"></i></a>
+           <a href="https://www.tiktok.com/@alhafizazmn_" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+ <script>
+         const clockElement = document.getElementById('clock');
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        
+    </script>
+    <!-- Include FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+

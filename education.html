@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="headerstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+       body {
+    font-family: 'Roboto', sans-serif;
+    background: #05f05f;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #05ffbc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #fafafa;
+}
+
+ul, ol {
+    margin: 20px auto;
+    padding: 0;
+    max-width: 800px;
+    list-style-position: inside;
+}
+
+ul li, ol li {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #007BFF;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.timeline ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.timeline-item:hover {
+    transform: scale(1.02);
+    background-color: #eef6ff;
+}
+
+.timeline-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline ul li span {
+    font-weight: bold;
+    color: #007BFF;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline ul li strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.timeline ul li .event-details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eef6ff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.flip-card {
+    position: relative;
+    width: 180px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease;
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, #2563eb, #1e293b);
+    transform: rotateY(0deg);
+}
+
+.flip-card-front img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front p {
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #1e293b, #111827);
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.flip-card:hover .flip-card-front {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-back {
+    transform: rotateY(0deg);
+}
+
+.badges {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.badge:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 20px 0;
+}
+
+.section-alt {
+    background: linear-gradient(to right, #a8c0ff, #3f58a7);
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education</h1>
+        <nav>
+            <center><ul>
+                <li><a href="websiteindex.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav></center>
+    </header>
+    <main>
+        <h2>Educational Background</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Years Attended</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Diploma in Information Management</td>
+                    <td>Universiti Teknologi MARA (UiTM)</td>
+                    <td>2022 - Present</td>
+                </tr>
+                <tr>
+                    <td>SPM</td>
+                    <td>SMK Dato' Mohd Yunos Sulaiman</td>
+                    <td>2017 - 2021</td>
+                </tr>
+            </tbody>
+        </table>
+
+       <h3>Favorite Subjects</h3>
+<div class="flip-card-container">
+    <div class="flip-card">
+        <div class="flip-card-front">
+            <img src="science.gif" alt="Science">
+            <b><p>Science</p></b>
+        </div>
+        <div class="flip-card-back">
+            <p>Dive into the mysteries of biology, chemistry, and physics to better understand the world and universe.</p>
+        </div>
+    </div>
+
+    
+    <div class="flip-card">
+        <div class="flip-card-front">
+            <img src="geography.gif" alt="Geography">
+            <b><p>Geography</p></b>
+        </div>
+        <div class="flip-card-back">
+            <p>Discover the intricate balance of Earth's landscapes, cultures, and natural processes.</p>
+        </div>
+    </div>
+
+    
+    <div class="flip-card">
+        <div class="flip-card-front">
+            <img src="webdevelopment.gif" alt="Web Development">
+            <b><p>Web Development</p></b>
+        </div>
+        <div class="flip-card-back">
+            <p>Learn to create engaging and responsive websites to bring ideas to life online.</p>
+        </div>
+    </div>
+
+    
+    <div class="flip-card">
+        <div class="flip-card-front">
+            <img src="programming.gif" alt="Programming">
+            <b><p>Programming</p></b>
+        </div>
+        <div class="flip-card-back">
+            <p>Master coding and problem-solving through programming languages like Python, Java, and more.</p>
+        </div>
+    </div>
+</div>
+
+
+<h3>My Educational Journey</h3>
+<div class="timeline">
+    <ul>
+        <li>
+            <div data-aos="fade-up">
+            <div class="timeline-item">
+                <img src="kindergarden.jpg" alt="Tadika Agama Johor" class="timeline-img">
+                <div class="timeline-content">
+                    <span>2009 - 2010: </span>
+                    <strong>Tadika Agama Johor</strong> - My kindergarten journey began here, where I developed early social and learning skills.
+                </div>
+            </div>
+        </li>
+        <li>
+            <div data-aos="fade-up">
+            <div class="timeline-item">
+                <img src="primaryschool.jpg" alt="SK Pekan Nanas" class="timeline-img">
+                <div class="timeline-content">
+                    <span>2011 - 2016: </span>
+                    <strong>Sekolah Kebangsaan Pekan Nanas</strong> - Primary school, where I built my foundation in academics and explored extracurricular activities.
+                </div>
+            </div>
+        </li>
+        <li>
+            <div data-aos="fade-up">
+            <div class="timeline-item">
+                <img src="secondaryschool.jpg" alt="SMK Dato'Mohd Yunos Sulaiman" class="timeline-img">
+                <div class="timeline-content">
+                    <span>2017 - 2022: </span>
+                    <strong>Sekolah Menegah Kebangsaan Dato' Mohd Yunos Sulaiman</strong> -Secondary school, where I nurtured my interest in technology and leadership roles.
+                </div>
+            </div>
+        </li>
+        <li>
+            <div data-aos="fade-up">
+            <div class="timeline-item">
+                <img src="uitm.png" alt="Universiti Teknologi MARA" class="timeline-img">
+                <div class="timeline-content">
+                    <span>2022 - Present: </span>
+                    <strong>Universiti Teknologi MARA (UiTM) Johor</strong> - Pursuing a Diploma in Information Management, focusing on advanced technology and data handling skills.
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+        <h3>Achievements</h3>
+        <div class="badges">
+            <span class="badge">Dean List</span>
+            <span class="badge">Johor Young Artist Award</span>
+            <span class="badge">Encouragement Awards for Academic</span>
+            <span class="badge">Student Leader Board</span>
+        </div>
+    </main>
+    <footer>
+        <p>This System was developed by Al-Hafiz Azman</p>
+    </footer>
+    <script>
+        function expandEvent(id) {
+            const eventDetails = document.getElementById(id);
+            eventDetails.style.display = eventDetails.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

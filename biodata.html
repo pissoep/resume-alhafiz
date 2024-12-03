@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Muhammad Al-Hafiz Bin Azman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="headerstyle.css">
+    <style>
+body {
+    font-family: "Roboto", Arial, sans-serif; 
+    background: url("biodatabackground.gif") no-repeat center center fixed;
+    background-color: #f4f4f4;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.section {
+    background: linear-gradient(135deg, #a5bf3d, #8ab02d); 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.section h2, 
+.section h3 {
+    color: #007BFF; 
+    margin-bottom: 15px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #007BFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+
+.center-section {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.media-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.media-item {
+    flex: 1 1 150px; 
+    text-align: center;
+}
+
+.media-item img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.media-item img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #007BFF;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6); 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.hobbies-skills {
+    background: linear-gradient(135deg, #ff4d94, #ff99cc); 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.quote-section {
+    border: 3px solid #007BFF;
+    padding: 20px;
+    background: #05ffee;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    max-width: 500px;
+}
+
+.movie-music-section {
+    background: linear-gradient(135deg, #4CAF50, #81C784); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .media-section {
+        flex-direction: column;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Biodata</h1>
+        <nav>
+            <ul>
+                <li><a href="websiteindex.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+       <div class="container">
+        <div class="section personal-info">
+            <h2>Personal Information</h2>
+            <div style="text-align: center;">
+                <img src="me.jpg" alt="Profile Picture" class="profile-picture">
+                <p><strong>Name:</strong> Muhammad Al-Hafiz Bin Azman</p>
+                <p><strong>Date of Birth:</strong> March 30, 2003</p>
+                <p><strong>Place of Birth:</strong> Lahad Datu, Sabah</p>
+                <p><strong>Email:</strong> <a href="mailto:alhafizazman04@gmail.com" style="color: #ffeb3b; text-decoration: none;">alhafizazman04@gmail.com</a></p>
+                <p><strong>Phone Number:</strong> 017-7938406</p>
+            </div>
+        </div>
+
+           <div class="section hobbies-skills">
+           <center> <h3 style="text-align: center;font-size: 1.4rem; margin-top: 20px;">Skills</h3>
+            <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                <li><i class="fas fa-laptop-code"></i> Web Design</li>
+                <li><i class="fas fa-code"></i> PHP Programming</li>
+                <li><i class="fas fa-video"></i> Video Editing</li>
+                <li><i class="fas fa-file-alt"></i> Microsoft Word</li>
+                <li><i class="fas fa-paint-brush"></i> Canva</li>
+                <li><i class="fas fa-code"></i> C++ Programming</li>
+            </ul>
+            <h3 style="text-align: center; font-size: 1.4rem; margin-top: 20px;">Hobbies</h3>
+            <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                <li><i class="fas fa-dumbbell"></i> Badminton</li>
+                <li><i class="fas fa-mountain"></i> Hiking</li>
+                <li><i class="fas fa-plane"></i> Traveling</li>
+            </ul></center>
+        </div>
+    </div>
+
+            <center><div class="quote-section">
+            <h3 style="margin-bottom: 15; color: #007BFF;">Favorite Quote</h3>
+            <blockquote style="font-style: italic; margin: 0; color: #333; font-size: 1.2rem; line-height: 1.6">
+              <b>"Think about your parents' feelings before acting"</b>
+            </blockquote>
+        </div></center>
+
+       <div class="container">
+        <div class="section movie-music-section">
+            <h3 style="color: white;">Favorite Movies</h3>
+            <div class="media-section" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <div class="media-item" style="text-align: center;">
+                    <img src="train-to-busan-poster.jpg" alt="Train to Busan">
+                    <p style="color: white;"><strong>Train to Busan</strong></p>
+                </div>
+                <div class="media-item" style="text-align: center;">
+                    <img src="Kung_Fu_Panda.webp" alt="Kung Fu Panda">
+                    <p style="color: white;"><strong>Kung Fu Panda</strong></p>
+                </div>
+                <div class="media-item" style="text-align: center;">
+                    <img src="Madagascar.webp" alt="Madagascar">
+                    <p style="color: white;"><strong>Madagascar</strong></p>
+                </div>
+            </div>
+        </div>
+     <div class="section">
+    <h3 style="color: hotblue;">Favorite Music</h3>
+    <div style="text-align: center;">
+        <b><p style="color: blue;">"Here Your Perfect" by Jamie Miller</p></b>
+       <center> <a href="javascript:void(0)" onclick="playMusic()">
+            <img id="dvdImage" src="dvd.poster.png" alt="Here Your Perfect DVD" style="width: 150px; border-radius: 10px; transition: transform 1s;">
+        </a>
+         <p style="margin-top: 10px; font-style: italic; color: black;">Click the picture to play the music</p>
+       <audio id="musicPlayer" controls style="display: none; margin-top: 20px;">
+            <source src="here-your-perfect.mp3" type="audio/mp3"> </center>
+        </audio>
+    </div>
+</div>
+
+    </div>
+
+    <footer>
+    <p>This system <sub>was</sub> developed by Al-Hafiz Azman.</p>
+</footer>
+
+   <script>
+    function playMusic() {
+        const player = document.getElementById('musicPlayer');
+        const dvdImage = document.getElementById('dvdImage');
+        
+        
+        player.style.display = 'block';
+        player.play();
+        
+        
+        dvdImage.style.animation = "spin 6s linear infinite";
+    }
+
+    
+    document.getElementById('musicPlayer').onended = function() {
+        const dvdImage = document.getElementById('dvdImage');
+        dvdImage.style.animation = "none"; 
+    };
+</script>
+</body>
+</html>
